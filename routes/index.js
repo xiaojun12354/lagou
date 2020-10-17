@@ -1,9 +1,15 @@
 var express = require('express');
+var controllerIndex = require('../controller/index');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+//访问 login 页面
+router.get('/login',controllerIndex.login);
+
+//访问 register 页面
+router.get('/register',controllerIndex.register);
+
+//访问 admin 页面
+router.get('/admin',controllerIndex.admin);
+
 
 module.exports = router;
