@@ -1,9 +1,7 @@
 var crypto = require('crypto');
 var secret = 'rqwefdsa';
 function getCrypto(arg){
-    var hash = crypto.createHmac('sha256', secret)
-                    .updata(arg)
-                    .digest('hex');
+    var hash = crypto.createHmac('sha256', secret).update(arg).digest('hex');
     return hash;
 }
 
